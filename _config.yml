@@ -41,3 +41,13 @@ kramdown:
   auto_ids: true
   hard_wrap: false
   syntax_highlighter: rouge
+
+exclude:
+  - tool/src
+  - tool/node_modules
+  - tool/package.json
+  - tool/package-lock.json
+  - tool/tsconfig.json
+  - tool/vite.config.ts
+  - tool/README.md
+  - tool/metadata.json
