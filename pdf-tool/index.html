@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF Compressor (offline)</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./vendor/pdf-lib.min.js"></script>
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>PDF Compressor</h1>
+        <p>100% offline. Files never leave your browser.</p>
+      </header>
+
+      <section class="card">
+        <label for="files" class="label">PDF files</label>
+        <input id="files" type="file" accept="application/pdf" multiple />
+
+        <fieldset class="modes">
+          <legend class="label">Compression mode</legend>
+          <label><input type="radio" name="mode" value="lossless" /> Lossless <small>metadata &amp; object streams only</small></label>
+          <label><input type="radio" name="mode" value="low" /> Lossy — Low <small>quality 85, scale 1.5</small></label>
+          <label><input type="radio" name="mode" value="medium" checked /> Lossy — Medium <small>quality 75, scale 1.2</small></label>
+          <label><input type="radio" name="mode" value="high" /> Lossy — High <small>quality 60, scale 1.0</small></label>
+        </fieldset>
+
+        <button id="compress">Compress</button>
+      </section>
+
+      <section class="card">
+        <h2>Results</h2>
+        <ul id="results" class="results"></ul>
+      </section>
+    </main>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>
