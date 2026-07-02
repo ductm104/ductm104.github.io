@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YT TCP — Lấy transcript YouTube</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="hero">
+        <h1>YT TCP</h1>
+        <p>Tiện ích Chrome nhỏ gọn giúp lấy phụ đề (transcript) của video YouTube — chạy hoàn toàn trên trình duyệt, không cần server.</p>
+      </header>
+
+      <section class="card">
+        <h2>Tính năng</h2>
+        <ul>
+          <li>Chỉ hoạt động trên trang <code>youtube.com/watch</code></li>
+          <li>Tự phát hiện các track phụ đề, gồm cả phụ đề tự sinh</li>
+          <li>Hai chế độ xuất: <strong>văn bản thuần</strong> hoặc <strong>văn bản kèm timestamp</strong></li>
+          <li>Gom các đoạn phụ đề rời rạc thành đoạn văn dễ đọc hơn</li>
+          <li>Không cần build, không phụ thuộc backend</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Tải về</h2>
+        <p>Tải file zip của tiện ích, giải nén ra một thư mục bất kỳ, rồi làm theo hướng dẫn cài đặt phía dưới.</p>
+        <a class="download" href="./yt-tcp-v0.1.0.zip" download>Tải yt-tcp v0.1.0 (.zip)</a>
+      </section>
+
+      <section class="card">
+        <h2>Hướng dẫn cài đặt (Chrome / Edge / Brave)</h2>
+        <ol>
+          <li>Tải file <code>yt-tcp-v0.1.0.zip</code> ở nút phía trên.</li>
+          <li>Giải nén file zip ra một thư mục — ví dụ <code>~/Downloads/yt-tcp</code>. <strong>Đừng xoá thư mục này</strong>, vì Chrome sẽ nạp trực tiếp từ đó.</li>
+          <li>Mở trình duyệt, gõ vào thanh địa chỉ: <code>chrome://extensions</code> rồi nhấn <kbd>Enter</kbd>.
+            <div class="muted">Với Edge dùng <code>edge://extensions</code>, Brave dùng <code>brave://extensions</code>.</div>
+          </li>
+          <li>Bật công tắc <strong>Chế độ nhà phát triển</strong> (Developer mode) ở góc trên bên phải.</li>
+          <li>Nhấn nút <strong>Tải tiện ích đã giải nén</strong> (Load unpacked).</li>
+          <li>Chọn thư mục vừa giải nén ở bước 2 (thư mục chứa file <code>manifest.json</code>).</li>
+          <li>Tiện ích <em>YT TCP</em> sẽ hiện trong danh sách. Có thể ghim vào thanh công cụ bằng biểu tượng ghim.</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Cách sử dụng</h2>
+        <ol>
+          <li>Mở một video YouTube bất kỳ có phụ đề (nút <em>CC</em> hiện trên trình phát).</li>
+          <li>Nhấn vào biểu tượng tiện ích <strong>YT TCP</strong> trên thanh công cụ.</li>
+          <li>Chọn track phụ đề mong muốn — track mặc định của video sẽ ở đầu danh sách.</li>
+          <li>Chọn chế độ xuất: <em>plain text</em> hoặc <em>with timestamps</em>.</li>
+          <li>Nội dung transcript sẽ hiện trong popup, có thể copy trực tiếp.</li>
+        </ol>
+        <div class="note">
+          <strong>Lưu ý:</strong> Nếu video không có phụ đề, hoặc là livestream / video bị chặn khu vực, tiện ích có thể không lấy được transcript.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Cập nhật hoặc gỡ cài đặt</h2>
+        <ul>
+          <li><strong>Cập nhật:</strong> Tải bản zip mới, giải nén đè lên thư mục cũ, rồi vào <code>chrome://extensions</code> nhấn <strong>Tải lại</strong> (Reload) trên thẻ YT TCP.</li>
+          <li><strong>Gỡ cài đặt:</strong> Vào <code>chrome://extensions</code>, nhấn <strong>Xoá</strong> trên thẻ YT TCP. Sau đó có thể xoá thư mục đã giải nén nếu không dùng nữa.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Sự cố thường gặp</h2>
+        <ul>
+          <li><strong>Không thấy nút "Tải tiện ích đã giải nén":</strong> Bạn chưa bật <em>Chế độ nhà phát triển</em>. Bật công tắc ở góc phải trên.</li>
+          <li><strong>Chrome báo lỗi manifest:</strong> Bạn chọn nhầm thư mục cha. Hãy chọn đúng thư mục chứa file <code>manifest.json</code>.</li>
+          <li><strong>Popup báo không có phụ đề:</strong> Kiểm tra video có bật CC không; đôi khi cần chờ video load xong rồi bấm lại tiện ích.</li>
+          <li><strong>Sau khi YouTube cập nhật, tiện ích không hoạt động:</strong> YouTube có thể thay đổi định dạng dữ liệu — chờ bản cập nhật của tiện ích.</li>
+        </ul>
+      </section>
+
+      <p class="muted">Mã nguồn: <a href="https://github.com/ductm104" target="_blank" rel="noopener">github.com/ductm104</a></p>
+    </main>
+  </body>
+</html>
