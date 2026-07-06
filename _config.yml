@@ -7,7 +7,7 @@
 # https://learnxinyminutes.com/docs/yaml/
 
 title: Hello!
-description: Happy blogging... ❤
+description: ❤
 github_username: ductm104
 
 # Email and twitter are optional:
@@ -27,6 +27,10 @@ plugins:
   - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
+
+header_pages:
+  - tools.md
+  - about.md
 
 titles_from_headings:
   enabled:     true

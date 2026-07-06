@@ -1,3 +1,7 @@
-# About Me
+---
+layout: page
+title: About Me
+permalink: /about/
+---
 
-There is nothing about me!
+Empty!
