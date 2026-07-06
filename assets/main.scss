@@ -4,6 +4,12 @@
 
 @import "{{ site.theme }}";
 
+hr {
+        margin: 30px 0;
+        border: 0;
+        border-top: 1px solid #d8dee4;
+}
+
 .post img {
         display: block;
         border:1px solid #021a40;
@@ -59,4 +65,3 @@
 }
 
 .codecell table { width: auto; }
-
