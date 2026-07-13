@@ -60,14 +60,6 @@ exclude:
   - install.sh
   - run.sh
   - README.md
-  - tool/src
-  - tool/node_modules
-  - tool/package.json
-  - tool/package-lock.json
-  - tool/tsconfig.json
-  - tool/vite.config.ts
-  - tool/README.md
-  - tool/metadata.json
 YAML
 
 echo "Installing Jekyll gems into .bundle/vendor..."
@@ -77,19 +69,6 @@ BUNDLE_GEMFILE="$LOCAL_GEMFILE" bundle install
 
 # Keep the tracked run.sh first-run check from rewriting local Bundler config.
 mkdir -p vendor/bundle
-
-if [ -f tool/package.json ]; then
-  if command -v npm >/dev/null 2>&1; then
-    echo "Installing tool dependencies..."
-    (
-      cd tool
-      npm install
-    )
-  else
-    echo "npm not found; skipping tool dependencies." >&2
-    echo "Install Node.js/npm if you need to build or run ./tool." >&2
-  fi
-fi
 
 echo "Install complete."
 echo "Run the site with: BUNDLE_GEMFILE=$LOCAL_GEMFILE ./run.sh"
