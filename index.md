@@ -2,6 +2,13 @@
 layout: home
 ---
 
+## July 13, 2026
+[Reverse information paradox](https://x.com/satyanadella/status/2076323181154230284)
+> You essentially pay for intelligence twice, once with money, and again with something even more valuable: the proprietary knowledge you must reveal to make that intelligence useful. __The better you want the model to perform, the more of that knowledge you have to feed it!__
+> 
+> Over time, the information asymmetry becomes increasingly skewed. The seller learns more and more about you as you use what you purchased, while you learn very little about what the seller is learning in return.
+
+---
 
 ## July 6, 2026
 
