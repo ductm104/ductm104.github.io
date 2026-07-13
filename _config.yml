@@ -24,7 +24,6 @@ use_math: true
 theme: minima
 plugins:
   - jekyll-feed
-  - jekyll-gist
   - jekyll-octicons
   - jekyll-github-metadata
 
@@ -47,11 +46,8 @@ kramdown:
   syntax_highlighter: rouge
 
 exclude:
-  - tool/src
-  - tool/node_modules
-  - tool/package.json
-  - tool/package-lock.json
-  - tool/tsconfig.json
-  - tool/vite.config.ts
-  - tool/README.md
-  - tool/metadata.json
+  - install.sh
+  - run.sh
+  - README.md
+  - Gemfile
+  - Gemfile.lock
