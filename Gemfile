@@ -10,8 +10,13 @@ source "https://rubygems.org"
 # gem "jekyll", "~> 4.0.0"
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
-# To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
+# The github-pages meta-gem cannot run on Ruby >= 4.0 (its commonmarker
+# dependency caps Ruby at < 4.0), so for local dev we use jekyll directly,
+# matching the version GitHub Pages runs in production. The deployed site
+# is still built by GitHub with its own gem set.
+gem "jekyll", "~> 3.10"
+gem "kramdown-parser-gfm"
+gem "kramdown-math-katex"
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
@@ -30,5 +35,9 @@ end
 # Performance-booster for watching directories on Windows
 gem "wdm", "~> 0.1.1", :install_if => Gem.win_platform?
 
-gem "faraday", "< 1.0"
+# stdlib gems removed from newer Rubies that jekyll 3.x still requires
+gem "webrick"
+gem "csv"
+gem "base64"
+gem "bigdecimal"
 
