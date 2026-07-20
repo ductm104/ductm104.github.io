@@ -7,6 +7,15 @@ layout: home
 > Several of my peers now “AI-wash” their work, meaning that even when they can perfectly competently execute on their jobs to the satisfaction of their management teams, said managers are unhappy if the engineers haven’t used AI in the work… so now they’re lying about using LLMs even in contexts where their professional judgement is that they aren’t the appropriate tool.
 
 
+--- 
+
+Theo Artificial Analysis, để tối ưu chi phí cho coding tasks, thì nên sử dụng GPT5.6 Luna xhigh/max rẻ hơn nhiều so với GPT5.6 Sol medium mà vẫn cho kết quả tương đương. \
+Thông minh tăng dần: Opus4.8 max ~~ GPT5.6 luna xhigh -> luna max -> tera max -> sol high
+
+<img src="https://pbs.twimg.com/media/HM9MQuPXkAAh4r0?format=jpg&name=4096x4096" width="500">
+
+---
+
 ## July 13, 2026
 [Reverse information paradox](https://x.com/satyanadella/status/2076323181154230284)
 > You essentially pay for intelligence twice, once with money, and again with something even more valuable: the proprietary knowledge you must reveal to make that intelligence useful. __The better you want the model to perform, the more of that knowledge you have to feed it!__
