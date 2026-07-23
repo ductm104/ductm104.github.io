@@ -2,6 +2,22 @@
 layout: home
 ---
 
+## July 23, 2026
+
+[Job interview could be an attack](https://citizendot.github.io/articles/fake-job-interview-git-hook-malware/)
+
+Hãy cần cẩn thận khi tham gia phỏng vấn cho một công ty ngẫu nhiên nào đó mà yêu cầu làm "take-home assignment".
+Trong quá trình phỏng vấn, công ty sẽ yêu cầu bạn làm 1 bài tập nhỏ và gửi lại kết quả, thường sẽ là debug/implement một feature/code nào đó.
+Trong trường hợp của blog này, tác giả được yêu cầu clone 1 github repo về. Nhìn sơ qua thì repo này khá giống một repo backend thông thường.
+Tuy nhiên điều đáng nghi là repo có chứa nhiều git hooks, và một trong các đoạn pre-commit hooks sẽ chạy đoạn mã download mã độc online rồi chạy trên máy của mình.
+
+Sau khi đào sâu hơn, tác giả thấy rằng có nhiều cách khách nữa kể kích hoạt mã độc, ví dụ như mở repo bằng Vscode.
+
+> After realizing this was a widespread campaign, I did a bit more digging and found that people are getting different variations of this attack. Some folks received a zip file containing a .vscode folder. Inside, the attackers hid commands configured to run as soon as the directory is opened in VSCode (launch commands).
+
+
+---
+
 ## July 20, 2026
 [The impact of AI on decision-making](https://ludic.mataroa.blog/blog/ai-mania-is-eviscerating-global-decision-making/)
 > Several of my peers now “AI-wash” their work, meaning that even when they can perfectly competently execute on their jobs to the satisfaction of their management teams, said managers are unhappy if the engineers haven’t used AI in the work… so now they’re lying about using LLMs even in contexts where their professional judgement is that they aren’t the appropriate tool.
